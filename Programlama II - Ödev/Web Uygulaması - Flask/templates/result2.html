@@ -1,0 +1,9 @@
+{% extends "basepage.html" %}
+{% block body %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<h2 class="kitleindeksbaslik">{{ page_title }}</h2>
+
+
+<h3 class="kitleindeksbaslik">Sonuç: {{ result }}</h3>
+ 
+{% endblock %}

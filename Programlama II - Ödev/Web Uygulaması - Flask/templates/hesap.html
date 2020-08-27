@@ -1,0 +1,14 @@
+{% extends 'basepage.html' %}
+{% block body %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<h2 class="hesapbaslik">{{ page_title }}</h2>
+<body>
+<form method='POST' action='/kitleindeksi'>
+<table>
+<p class="yazi">Vücut kitle indeksinizin hesaplanması için boy ve kilo değerlerinizi giriniz.</p>
+<tr><td class="yazirenk">Boy:</td><td><input name="firstValue" type="TEXT" width="10"</td></tr>
+<tr><td class="yazirenk">Kilo:</td><td><input name="secondValue" type="TEXT" width="10"</td></tr>
+</table>
+<p><input value="Hesapla" type="SUBMIT"></p>
+
+{% endblock %}

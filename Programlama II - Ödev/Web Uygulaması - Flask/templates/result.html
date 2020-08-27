@@ -1,0 +1,22 @@
+{% extends "basepage.html" %}
+{% block body %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<h2 class="kitleindeksbaslik">{{ page_title }}</h2>
+<table>
+    <tr><td class="kitleindeksbaslik">Boy:</td><td class="kitleindeksbaslik">{{ first_value }}</td></tr>
+    <tr><td class="kitleindeksbaslik">Kilo:</td><td class="kitleindeksbaslik">{{ second_value }}</td></tr>
+</table>
+ 
+<h3 class="kitleindeksbaslik">Sonuç: {{ sum_result }} - {% if (sum_result>0) and (sum_result<18.4) %}
+            Zayıf
+        {%elif (sum_result>18.5) and (sum_result<24.9)%}
+            Normal
+        {%elif (sum_result>25) and (sum_result<29.9)%}
+            Kilolu
+        {%elif (sum_result>30) and (sum_result<34.9)%}:
+            Şişman
+        {%elif (sum_result>35) and (sum_result<44.9)%}:
+            Obez
+        {%endif%}</h3>
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'basepage.html' %}
+{% block body %}
+ 
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<form method='POST' action='/anasayfa'>
+<body>
+<h1 class="anasayfabaslik">Spor Salonu Yönetimi Yazılımı<h1>
+<nav>
+			<a href = "kayit">Kayıt Ekle</a>
+			<a href = "hesap">Vücut Kitle İndeksi Hesaplama</a>
+			<a href = "account">Kalori İhtiyacı Hesaplama</a>
+			<div id="indicator"></div>
+</nav>
+
+</body>
+{% endblock %}

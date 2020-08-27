@@ -1,0 +1,38 @@
+{% extends 'basepage.html' %}
+{% block body %}
+
+<title>Kayıt Ekle</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+<body>
+	<h2 class="kayitbaslik2">Sporcu Kayıt Ekranı</h2>
+	<div id="form">
+	<form action="/kullanicieklesonuc" method="POST">
+		Adı:<input type="text" name="ad"><br>
+		Soyad:<input type="text" name="soyad"><br>
+		Yaş:<input type="text" name="yas"><br>
+		Cinsiyet:<input type="radio" name="cinsiyet">Kadın
+		<input type="radio" name="cinsiyet">Erkek<br>
+		Süre(ay):<select class="select" name="sure">
+		<option>1 Ay</option>
+		<option>2 Ay</option>
+		<option>3 Ay</option>
+		<option>4 Ay</option>
+		<option>5 Ay</option>
+		<option>6 Ay</option>
+		<option>7 Ay</option>
+		<option>8 Ay</option>
+		<option>9 Ay</option>
+		<option>10 Ay</option>
+		<option>11 Ay</option>
+		<option>12 Ay</option>
+		</select><br>
+		Fiyat:<input type="text" name="fiyat" placeholder="TL"><br>
+		Kayıt Tarihi:<input type="text" name="kayit_tarihi"><br>
+		Boy:<input type="text" name="boy" placeholder="cm"><br>
+		Kilo:<input type="text" name="kilo" placeholder="kg"><br>
+		<input type="submit" value="Kayıt Ekle">
+	</form>
+	</div>
+
+{% endblock %}

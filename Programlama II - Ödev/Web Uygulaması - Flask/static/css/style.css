@@ -1,0 +1,247 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background-color: #292929;
+    overflow: hidden;
+}
+
+nav {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    width: 550px;
+    display: table;
+    margin: 0 auto;
+    transform: translateY(-50%);
+}
+
+nav a {
+    position: relative;
+    width: 33.333%;
+    display: table-cell;
+    text-align: center;
+    color: #949494;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: 0.2s ease color;
+}
+
+nav a:before,
+nav a:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 0.2s ease transform;
+}
+
+nav a:before {
+    top: 0;
+    left: 10px;
+    width: 6px;
+    height: 6px;
+}
+
+nav a:after {
+    top: 5px;
+    left: 18px;
+    width: 4px;
+    height: 4px
+}
+
+nav a:nth-child(1):before {
+    background-color: yellow;
+}
+
+nav a:nth-child(1):after {
+    background-color: red;
+}
+
+nav a:nth-child(2):before {
+    background-color: #00e2ff;
+}
+
+nav a:nth-child(2):after {
+    background-color: #89ff00;
+}
+
+nav a:nth-child(3):before {
+    background-color: purple;
+}
+
+nav a:nth-child(3):after {
+    background-color: palevioletred;
+}
+
+#indicator {
+    position: absolute;
+    left: 5%;
+    bottom: 0;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: 0.2s ease left;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+nav a:hover:before,
+nav a:hover:after {
+    transform: scale(1);
+}
+
+nav a:nth-child(1):hover~#indicator {
+    background: linear-gradient(130deg, yellow, red);
+}
+
+nav a:nth-child(2):hover~#indicator {
+    left: 34%;
+    background: linear-gradient(130deg, #00e2ff, #89ff00);
+}
+
+nav a:nth-child(3):hover~#indicator {
+    left: 70%;
+    background: linear-gradient(130deg, purple, palevioletred);
+}
+
+
+/* Buton Tasarımı */
+
+#form {
+    margin-right: 720px;
+    margin-top: 60px;
+    font-family: sans-serif;
+    font-size: 22px;
+    color: white;
+    text-align: right;
+}
+
+input[type="submit"] {
+    -webkit-transition-property: background-color, color;
+    transition-property: background-color, color;
+    -webkit-transition-duration: 200ms;
+    transition-duration: 200ms;
+    display: block;
+    padding: .5em 2em;
+    width: 20%;
+    border: none;
+    border-radius: 0.3em;
+    background-color: grey;
+    color: white;
+    font-size: 1em;
+    margin-top: 10px;
+    margin-left: 650px;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:active,
+input[type="submit"]:focus {
+    background-color: tomato;
+    color: white;
+}
+
+input[type=text] {
+    border: none;
+    border-bottom: 2px solid black;
+    display: inline-block;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+input[type=text]:focus {
+    background-color: lightblue;
+}
+
+input[type=date] {
+    border: none;
+    border-bottom: 2px solid black;
+    display: inline-block;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+
+/* h1 kodları */
+
+.anasayfabaslik {
+    margin-left: 450px;
+    margin-top: 60px;
+    font-size: 3em;
+    font-family: "OstrichBold", sans-serif;
+    color: white;
+    text-decoration: none;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.kayitbaslik {
+    margin-left: 600px;
+    margin-top: 40px;
+    font-size: 3em;
+    font-family: "OstrichBold", sans-serif;
+    color: white;
+    text-decoration: none;
+    font-weight: normal;
+    font-style: normal;
+}
+
+table {
+    margin-left: 650px;
+}
+
+.yazi {
+    margin-left: 550px;
+    color: white;
+}
+
+.yazirenk {
+    color: white;
+}
+
+.hesapbaslik {
+    margin-left: 600px;
+    color: white;
+}
+
+.hesapbaslik1 {
+    margin-left: 630px;
+    color: white;
+}
+
+.kitleindeksbaslik {
+    margin-left: 600px;
+    color: white;
+}
+
+.sonucbaslik {
+    margin-left: 600px;
+    color: white;
+}
+
+.formveri {
+    margin-left: 720px;
+    color: white;
+    font-size: 20px;
+}
+
+.formveri1 {
+    color: white;
+}
+
+.kayitbaslik2 {
+    font-size: 30px;
+    color: white;
+    margin-left: 570px;
+}

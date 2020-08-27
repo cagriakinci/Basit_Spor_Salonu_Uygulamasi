@@ -1,0 +1,18 @@
+{% extends 'basepage.html' %}
+{% block body %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<h2 class="hesapbaslik">{{ page_title }}</h2>
+<table>
+<form method='POST' action='/kalorihesap'>
+<h2 class="hesapbaslik1">Kalori İhtiyacı Hesaplama</h2>
+<p class="yazi">Vücudunuzun kalori ihtiyacının hesaplanması için boy,kilo ve cinsiyetinizi seçiniz.</p>
+<tr><td class="yazirenk">Boy:</td><td><input name="boyValue" type="Text" width="10"</td></tr>
+<tr><td class="yazirenk">Kilo:</td><td><input name="kiloValue" type="Text" width="10"</td></tr>
+<tr><td class="yazirenk">Yaş:</td><td><input name="yasValue" type="text" width="10"</td></tr>
+<tr><td class="yazirenk">Cinsiyet:</td><td class="yazirenk"><input name="cinsiyet" type="radio"</td>Kadın</tr>
+<tr><td></td><td class="yazirenk"><input name="cinsiyet" type="radio"</td>Erkek</tr>
+</table>
+<p><input value="Hesapla" type="SUBMIT"></p>
+</body>
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'basepage.html' %}
+{% block body %}
+
+<title>{{page_title}}</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+<h1 class="sonucbaslik">Formdan Gelen Veriler:</h1>
+
+{{hata}} <br>
+
+<strong class="formveri">Ad:{{ad}}</strong><br>
+<strong class="formveri">Soyad:{{soyad}}</strong><br>
+<strong class="formveri">Yaş:{{yas}}</strong><br>
+<strong class="formveri">Cinsiyet:{{cinsiyet}}</strong><br>
+<strong class="formveri">Süre:{{sure}}</strong><br>
+<strong class="formveri">Fiyat:{{fiyat}}</strong><br>
+<strong class="formveri">Kayıt Tarihi:{{kayit_tarihi}}</strong><br>
+<strong class="formveri">Boy:{{boy}}</strong><br>
+<strong class="formveri">Kilo:{{kilo}}</strong><br>
+
+{% endblock %}
